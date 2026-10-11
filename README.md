@@ -19,6 +19,8 @@
 
 倉庫已提供 `.agents/skills/` 的相對符號連結，指向五個 Skill。將整個倉庫作為 Codex 專案開啟，即可讓 Codex 發現它們。保留完整目錄結構；`conf-papers` 會使用 `start-my-day` 的共用程式。若新技能沒有出現，重新開啟專案或重啟 Codex。
 
+根目錄的 `AGENTS.md` 會依任務描述引導 Codex 選擇相關 Skill。日常使用直接說想找、讀或整理什麼論文即可，不必每次輸入 `$skill-name`。若要明確指定某個流程，仍可使用 `$` 引用 Skill。
+
 在倉庫根目錄準備 Python 環境：
 
 ```bash
@@ -40,9 +42,9 @@ export RESEARCH_CONFIG_PATH="/absolute/path/to/your/research_interests.yaml"
 例如在 Codex 輸入：
 
 ```text
-使用 $start-my-day，依我指定的研究設定找近期值得讀的論文；用繁體中文說明選擇理由。
-使用 $paper-analyze 分析這篇論文，重點檢查消融實驗是否支持作者的結論。
-使用 $paper-search 在我的 Vault 尋找與多實例學習相關的筆記。
+依我的研究設定找近期值得讀的論文；用繁體中文說明選擇理由。
+分析這篇論文，重點檢查消融實驗是否支持作者的結論。
+在我的 Vault 尋找與多實例學習相關的筆記。
 ```
 
 日常搜尋與分析由當前 Codex 模型執行，這些 Skills 不另外呼叫 Claude API。網頁版仍是獨立的 Anthropic 應用；這次適配範圍是本地 Skills。

@@ -15,6 +15,8 @@ This is a collection of Codex and Claude Code Skills for automating research pap
 
 Open this repository as a Codex project. The five skills are discoverable through relative symlinks in `.agents/skills/`; keep the repository together because conference search imports the daily-search helpers. Install `requirements.txt` in a virtual environment and provide Codex with your Python executable, research-config file and Obsidian vault paths. See the [Codex setup instructions](README.md#codex--astra-使用方式).
 
+The root `AGENTS.md` routes ordinary paper-research requests to the relevant skill. You can simply ask Codex to find recent papers, analyze one paper, extract a figure, or search your notes; naming `$skill-name` is optional.
+
 The revised skills let the model choose search coverage, ranking, analysis depth and output structure. Script scores are screening signals, not validated quality assessments. Citations and preservation of existing notes remain required. These local workflows use the current Codex model; the separate web app still calls Anthropic.
 
 ## Features
